@@ -8,7 +8,7 @@ const DeleteBook = () => {
   const handleDelete = async () => {
     try {
       const response = await axios.delete(
-        `http://localhost:5000/api/v1/book/deletebook/${id}`,
+        `${import.meta.env.VITE_BOOK_URI}/deletebook/${id}`,
 
         {
           headers: {

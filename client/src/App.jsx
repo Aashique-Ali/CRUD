@@ -18,6 +18,7 @@ function App() {
       <>
         <Route path="/" element={<Home />} />
         <Route path="/books" element={<AllBooks />} />
+        <Route path="/books/:id" element={<Books />} />
         <Route path="/books/add" element={<AddBook />} />
         <Route path="/books/delete/:id" element={<DeleteBook />} />
         <Route path="/books/edit/:id" element={<EditBook />} />

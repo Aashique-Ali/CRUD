@@ -11,7 +11,7 @@ const router = Router()
 
 router.route("").get(getAllBooks)
 router.route("/createbook").post(createBook)
-router.route("/getbook/:id").get(getBookById)
+router.route("/:id").get(getBookById)
 router.route("/updatebook/:id").put(updateBook)
 router.route("/deletebook/:id").delete(deleteBook)
 

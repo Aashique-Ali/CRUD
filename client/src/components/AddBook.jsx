@@ -5,7 +5,7 @@ const AddBook = () => {
   const [title, setTitle] = useState("")
   const [author, setAuthor] = useState("")
   const [genre, setGenre] = useState("")
-  const [desc, setDesc] = useState("")
+  const [description, setDescription] = useState("")
 
   //   const handleChange = (e)=>{
 
@@ -21,7 +21,7 @@ const AddBook = () => {
           title,
           author,
           genre,
-          desc,
+          description,
         },
         {
           headers: {
@@ -34,7 +34,7 @@ const AddBook = () => {
       setTitle("")
       setAuthor("")
       setGenre("")
-      setDesc("")
+      setDescription("")
     } catch (error) {
       console.error("can not add booook", error)
     }
@@ -106,9 +106,9 @@ const AddBook = () => {
             <textarea
               name="description"
               id="description"
-              value={desc}
+              value={description}
               style={{ resize: "none" }}
-              onChange={(e) => setDesc(e.target.value)}
+              onChange={(e) => setDescription(e.target.value)}
               rows="4"
               className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:ring-blue-300"
               required

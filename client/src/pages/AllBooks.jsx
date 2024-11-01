@@ -12,7 +12,7 @@ const AllBooks = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/v1/book")
+      .get(`${import.meta.env.VITE_BOOK_URI}`)
       .then((response) => {
         setData(response.data)
         setLoading(false)
@@ -47,9 +47,20 @@ const AllBooks = () => {
               <span className="inline-block bg-blue-100 text-blue-500 px-3 py-1 text-xs font-semibold rounded-full mb-3">
                 {item.genre}
               </span>
-              <p className="text-gray-700 text-sm mb-4">{item.desc}</p>
+              <p className="text-gray-700 text-sm mb-4">
+                {item.description && item.description.slice(0, 100)}
+              </p>
               <div className="flex gap-10">
-                <button className="mt-auto bg-blue-500 text-white text-sm font-medium py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-200">
+                <button
+                  onClick={() => navigate(`/books/${item._id}`)}
+                  className="mt-auto bg-green-500 text-white text-sm font-medium py-2 px-4 rounded hover:bg-green-600 transition-colors duration-200"
+                >
+                  Read More
+                </button>
+                <button
+                  onClick={() => navigate(`/books/edit/${item._id}`)}
+                  className="mt-auto bg-blue-500 text-white text-sm font-medium py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-200"
+                >
                   Edit
                 </button>
                 <button
