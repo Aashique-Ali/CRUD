@@ -26,7 +26,7 @@ const DeleteBook = () => {
   return (
     <div className="bg-gray-800 min-h-[100vh] flex justify-center items-center">
       <div className="bg-gray-200 w-[500px] rounded-lg h-[150px] flex flex-col text-center justify-center items-center">
-        <h1 className="text-2xl">are you sure you want delete product</h1>
+        <h1 className="text-2xl">are you sure you want delete this book</h1>
 
         <div className="flex justify-center items-center gap-10 mt-5 text-white">
           <button
